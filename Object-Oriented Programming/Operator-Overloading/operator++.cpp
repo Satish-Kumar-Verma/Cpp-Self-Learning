@@ -43,6 +43,11 @@ class Counter
             int result =  this->count + other.count;
             return result;
         }
+
+        int add(Counter &val)
+        {
+            return this->count + val.count;
+        }
 };
 
 
@@ -64,6 +69,10 @@ int main(void)
     cout << "Adding counter_1 and counter_2..." << endl;
     int sum = counter_obj + counter_obj_2;
     cout << "Sum is : " << sum << endl;
+
+    int sumn = counter_obj.add(counter_obj_2);
+
+    cout << "Sum with normal method : " << sumn << endl;
 
     return 0;
 }
